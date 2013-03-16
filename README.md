@@ -23,8 +23,10 @@ This code is based on Mandrill's original PHP API (version 1.0.17), located at: 
         'from_email' => 'example@example.org',
         'from_name'  => 'Example'
         'to'         => array(
-            'email' => $recipient_email,
-            'name'  => $recipient_name
+            array(
+                'email' => $recipient_email,
+                'name'  => $recipient_name
+            )
         ),
         'inline_css' => true
     );
